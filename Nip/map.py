@@ -8,12 +8,6 @@ class Map:
     def draw(self):
         self.win.fill(BOARD_COLOR)
 
-        # #test
-        # pygame.draw.line(self.win, BLACK_COLOR, (400, 400), (400, 50), 3)
-
-       
-        pygame.draw.circle(self.win,BLACK,(400,400),380,3)
-
         pygame.draw.line(
             self.win, BLACK_COLOR, (5 * SQUARE_SIZE + SQUARE_SIZE // 2, SQUARE_SIZE // 2), (7 * SQUARE_SIZE + SQUARE_SIZE // 2, 2*SQUARE_SIZE + SQUARE_SIZE // 2), 3)
         pygame.draw.line(
@@ -50,9 +44,5 @@ class Map:
                     elif board[row][col] == WHITE:
                         pygame.draw.circle(
                             self.win, WHITE_COLOR, (x, y), PIECE_RADIUS)
-                        
-        for i in range(0,360,THETA):
-            # pygame.draw.circle(self.win, (255,0,0), (400+380*math.cos(math.radians(15.8784 +15.8784*(i))), 400+380*math.sin(math.radians(15.8784 + 15.8784*(i)))), PIECE_RADIUS//3, 2)
-            pygame.draw.circle(self.win, (255,0,0), (400+380*math.cos(math.radians(i)), 400+380*math.sin(math.radians(i))), PIECE_RADIUS//3, 2)
 
             
